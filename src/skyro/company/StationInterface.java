@@ -1,7 +1,16 @@
 package skyro.company;
 
 public interface StationInterface {
-    void updateTyre();
+
+    void updateTyre(int numberOfWheel);
+
+    String getModelName();
+
+    int getWheelsCount();
+
+    void checkEngine();
+
+    void checkTrailer();
 
 
 

@@ -1,29 +1,17 @@
 package skyro.company;
 
-public class Car implements StationInterface {
-    public String modelName;
-    public int wheelsCount;
+public class Car extends Transport {
 
-    public Car(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
-    }
-
-    public String getModelName() {
-        return this.modelName;
-    }
-
-    public int getWheelsCount() {
-        return this.wheelsCount;
-    }
-
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    protected Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
+    }
+
+    @Override
+    public void checkTrailer() {
     }
 
 }
